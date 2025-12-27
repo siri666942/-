@@ -1,0 +1,203 @@
+/* stylelint-disable */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 糖博士 (Dr. Sugar) 设计系统
+   参考：蚂蚁保（阿福）3D拟人化 + 温感科技风格
+   核心：全息弥散渐变 + 毛玻璃拟态 + 马卡龙色系
+*/
+
+@layer base {
+  :root {
+    --radius: 1.5rem; /* 极端圆润 */
+    
+    /* 全息弥散渐变背景 - 淡紫色、奶白色、清透蓝 */
+    --background: 270 100% 98%;
+    --foreground: 240 10% 25%;
+    
+    /* 毛玻璃卡片 */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 25%;
+    
+    /* 主色调 - 温暖的薰衣草紫 */
+    --primary: 260 60% 65%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* 次要色 - 柔和的蜜桃粉 */
+    --secondary: 340 80% 85%;
+    --secondary-foreground: 340 50% 30%;
+    
+    /* 静音色 - 极淡的薄荷绿 */
+    --muted: 160 40% 95%;
+    --muted-foreground: 160 20% 45%;
+    
+    /* 强调色 - 清透蓝 */
+    --accent: 200 80% 90%;
+    --accent-foreground: 200 60% 30%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    
+    /* 边框和输入 - 极淡的半透明 */
+    --border: 240 20% 90%;
+    --input: 240 20% 90%;
+    --ring: 260 60% 65%;
+    
+    /* 马卡龙色系图表 */
+    --chart-1: 340 80% 75%; /* 蜜桃粉 */
+    --chart-2: 160 60% 70%; /* 薄荷绿 */
+    --chart-3: 200 70% 75%; /* 天空蓝 */
+    --chart-4: 280 60% 75%; /* 薰衣草紫 */
+    --chart-5: 50 80% 75%;  /* 柠檬黄 */
+    
+    /* 侧边栏 - 毛玻璃效果 */
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 240 10% 25%;
+    --sidebar-primary: 260 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 40% 95%;
+    --sidebar-accent-foreground: 260 60% 30%;
+    --sidebar-border: 240 20% 90%;
+    --sidebar-ring: 260 60% 65%;
+  }
+
+  .dark {
+    --background: 240 20% 12%;
+    --foreground: 240 10% 90%;
+    --card: 240 15% 15%;
+    --card-foreground: 240 10% 90%;
+    --popover: 240 15% 15%;
+    --popover-foreground: 240 10% 90%;
+    --primary: 260 60% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 60% 40%;
+    --secondary-foreground: 340 80% 90%;
+    --muted: 160 20% 20%;
+    --muted-foreground: 160 20% 60%;
+    --accent: 200 40% 25%;
+    --accent-foreground: 200 80% 85%;
+    --destructive: 0 62% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 240 20% 25%;
+    --input: 240 20% 25%;
+    --ring: 260 60% 65%;
+    --chart-1: 340 70% 60%;
+    --chart-2: 160 50% 55%;
+    --chart-3: 200 60% 60%;
+    --chart-4: 280 50% 60%;
+    --chart-5: 50 70% 60%;
+    --sidebar-background: 240 15% 15%;
+    --sidebar-foreground: 240 10% 85%;
+    --sidebar-primary: 260 60% 65%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 260 20% 22%;
+    --sidebar-accent-foreground: 260 40% 85%;
+    --sidebar-border: 240 20% 25%;
+    --sidebar-ring: 260 60% 65%;
+  }
+  
+  /* 全息弥散渐变背景 - 固定在视口 */
+  body {
+    background: linear-gradient(135deg, 
+      #F3E8FF 0%,   /* 淡紫色 */
+      #FAFAF9 35%,  /* 奶白色 */
+      #E0F2FE 70%,  /* 清透蓝 */
+      #F3E8FF 100%  /* 淡紫色 */
+    );
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+  
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply text-foreground;
+  }
+}
+
+@layer utilities {
+  /* 毛玻璃拟态效果 - 核心视觉元素 */
+  .glass-card {
+    @apply bg-white/80 backdrop-blur-xl border border-white/50 shadow-lg shadow-indigo-100/50;
+  }
+  
+  /* 彩色胶囊标签 - 像糖果一样 */
+  .pill-tag {
+    @apply px-4 py-1.5 rounded-full text-sm font-medium;
+    background: linear-gradient(135deg, var(--tw-gradient-stops));
+  }
+  
+  /* 渐变文本 */
+  .gradient-text {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+  }
+  
+  /* 柔软按钮 - 有点击欲望的设计 */
+  .soft-button {
+    @apply rounded-full px-6 py-3 font-medium transition-all duration-300;
+    @apply hover:scale-105 active:scale-95;
+    box-shadow: 0 4px 20px rgba(139, 92, 246, 0.3);
+  }
+  
+  /* 浮动卡片效果 - 3D人物的悬浮感 */
+  .floating-card {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+  /* 柔软输入框 - 像枕头一样 */
+  .soft-input {
+    @apply rounded-3xl px-6 py-4 bg-white/90 backdrop-blur-md;
+    @apply border-2 border-white/60 shadow-inner;
+    @apply focus:outline-none focus:ring-2 focus:ring-primary/50;
+    @apply transition-all duration-300;
+  }
+  
+  /* Bento Grid布局 - 便当盒式模块化 */
+  .bento-grid {
+    @apply grid gap-4 xl:gap-6;
+    @apply grid-cols-1 xl:grid-cols-12;
+  }
+  
+  .bento-item-large {
+    @apply xl:col-span-8;
+  }
+  
+  .bento-item-medium {
+    @apply xl:col-span-6;
+  }
+  
+  .bento-item-small {
+    @apply xl:col-span-4;
+  }
+  
+  /* 淡入动画 */
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(5px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}

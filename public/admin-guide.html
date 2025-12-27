@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent监控后台入口位置</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #1e40af;
+      border-bottom: 3px solid #3b82f6;
+      padding-bottom: 10px;
+    }
+    h2 {
+      color: #1e40af;
+      margin-top: 30px;
+    }
+    .step {
+      background: #eff6ff;
+      border-left: 4px solid #3b82f6;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .highlight {
+      background: #fef3c7;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-weight: bold;
+      color: #92400e;
+    }
+    .warning {
+      background: #fee2e2;
+      border-left: 4px solid #ef4444;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    .success {
+      background: #d1fae5;
+      border-left: 4px solid #10b981;
+      padding: 15px;
+      margin: 15px 0;
+      border-radius: 4px;
+    }
+    code {
+      background: #f3f4f6;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+      color: #dc2626;
+    }
+    .location-box {
+      border: 2px solid #3b82f6;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 8px;
+      background: #f0f9ff;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .emoji {
+      font-size: 1.5em;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1><span class="emoji">🎯</span>Agent监控后台入口位置指南</h1>
+    
+    <div class="warning">
+      <strong>⚠️ 重要提示：</strong>只有管理员账号才能看到"Agent监控"入口！<br>
+      当前管理员账号：<code>xiang</code>
+    </div>
+
+    <h2>📍 入口位置（3个地方）</h2>
+
+    <div class="location-box">
+      <h3>位置1：桌面端左侧侧边栏（最明显）⭐</h3>
+      <div class="step">
+        <strong>步骤：</strong>
+        <ol>
+          <li>使用管理员账号 <code>xiang</code> 登录</li>
+          <li>查看左侧侧边栏导航菜单</li>
+          <li>在"数据分析"下方，您会看到一条<span class="highlight">分隔线</span></li>
+          <li>分隔线下方就是 <span class="highlight">⚡ Agent监控</span></li>
+        </ol>
+      </div>
+      <p><strong>导航菜单结构：</strong></p>
+      <ul>
+        <li>💬 智能对话</li>
+        <li>📝 数据记录</li>
+        <li>📊 数据分析</li>
+        <li style="color: #9ca3af;">━━━━━━━━━━━━━━━━</li>
+        <li style="color: #3b82f6; font-weight: bold;">⚡ Agent监控 ← 这里！</li>
+      </ul>
+    </div>
+
+    <div class="location-box">
+      <h3>位置2：桌面端用户菜单</h3>
+      <div class="step">
+        <strong>步骤：</strong>
+        <ol>
+          <li>点击左下角的<span class="highlight">用户头像</span>（显示用户名首字母）</li>
+          <li>在弹出的下拉菜单中</li>
+          <li>选择 <span class="highlight">⚡ Agent监控</span></li>
+        </ol>
+      </div>
+      <p><strong>菜单选项：</strong></p>
+      <ul>
+        <li>👤 个人资料</li>
+        <li style="color: #3b82f6; font-weight: bold;">⚡ Agent监控 ← 这里！</li>
+        <li>🚪 退出登录</li>
+      </ul>
+    </div>
+
+    <div class="location-box">
+      <h3>位置3：移动端菜单</h3>
+      <div class="step">
+        <strong>步骤：</strong>
+        <ol>
+          <li>点击右上角的<span class="highlight">☰ 菜单图标</span></li>
+          <li>在侧边抽屉菜单中</li>
+          <li>在"数据分析"下方找到 <span class="highlight">⚡ Agent监控</span></li>
+        </ol>
+      </div>
+    </div>
+
+    <h2>🔍 如果找不到入口，请检查：</h2>
+    
+    <div class="step">
+      <strong>1. 确认您使用的是管理员账号</strong>
+      <ul>
+        <li>管理员用户名：<code>xiang</code></li>
+        <li>在用户头像下方应该显示"管理员"而不是"用户"</li>
+        <li>如果显示"用户"，说明您登录的不是管理员账号</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>2. 刷新页面</strong>
+      <ul>
+        <li>按 <code>Ctrl + R</code>（Windows）或 <code>Cmd + R</code>（Mac）</li>
+        <li>或者按 <code>F5</code></li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>3. 清除缓存</strong>
+      <ul>
+        <li>按 <code>Ctrl + Shift + R</code>（Windows）或 <code>Cmd + Shift + R</code>（Mac）</li>
+        <li>强制刷新页面，清除缓存</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>4. 直接访问URL</strong>
+      <ul>
+        <li>在浏览器地址栏输入：<code>/admin</code></li>
+        <li>按回车键直接访问</li>
+      </ul>
+    </div>
+
+    <h2>✅ 验证方法</h2>
+    
+    <div class="success">
+      <strong>如何确认您已进入Agent监控后台：</strong>
+      <ol>
+        <li>页面标题显示：<strong>"⚡ Agent监控后台"</strong></li>
+        <li>副标题显示：<strong>"多Agent系统工作流程和调用情况监控"</strong></li>
+        <li>页面顶部有4个统计卡片：
+          <ul>
+            <li>总调用次数</li>
+            <li>平均处理时间</li>
+            <li>数据记录</li>
+            <li>最活跃Agent</li>
+          </ul>
+        </li>
+        <li>有3个Tab页：调用日志、Agent统计、工作流分析</li>
+      </ol>
+    </div>
+
+    <h2>📊 功能说明</h2>
+    
+    <div class="step">
+      <strong>调用日志Tab：</strong>查看每次AI对话的详细记录
+      <ul>
+        <li>用户消息和AI回复</li>
+        <li>涉及的Agent（彩色标签）</li>
+        <li>Memory Update处理结果</li>
+        <li>数据记录情况</li>
+        <li>处理时间</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>Agent统计Tab：</strong>查看各Agent的调用频率
+      <ul>
+        <li>对话协调Agent（coordinator）</li>
+        <li>数据记录Agent（data_recorder）</li>
+        <li>即时分析Agent（analyzer）</li>
+        <li>教育科普Agent（educator）</li>
+        <li>激励支持Agent（motivator）</li>
+      </ul>
+    </div>
+
+    <div class="step">
+      <strong>工作流分析Tab：</strong>了解多Agent协同工作流程
+      <ul>
+        <li>典型的5步工作流程</li>
+        <li>Memory Update处理统计</li>
+        <li>数据记录效率分析</li>
+      </ul>
+    </div>
+
+    <h2>🧪 测试建议</h2>
+    
+    <div class="success">
+      <strong>建议测试流程：</strong>
+      <ol>
+        <li>先在"智能对话"页面发送几条消息，例如：
+          <ul>
+            <li>"我今天吃了煎饼果子"</li>
+            <li>"我跑步了30分钟"</li>
+            <li>"我刚测了血糖，7.2"</li>
+          </ul>
+        </li>
+        <li>然后进入"Agent监控"页面</li>
+        <li>在"调用日志"Tab中查看刚才的对话记录</li>
+        <li>在"Agent统计"Tab中查看各Agent的调用情况</li>
+        <li>在"工作流分析"Tab中了解系统工作流程</li>
+      </ol>
+    </div>
+
+    <div class="warning">
+      <strong>⚠️ 如果仍然找不到：</strong>
+      <ul>
+        <li>请确保您已经<strong>刷新页面</strong></li>
+        <li>请确保您使用的是<strong>管理员账号 xiang</strong></li>
+        <li>请检查浏览器控制台是否有错误信息（按F12打开）</li>
+        <li>尝试<strong>退出登录后重新登录</strong></li>
+      </ul>
+    </div>
+
+    <hr style="margin: 40px 0; border: none; border-top: 2px solid #e5e7eb;">
+    
+    <p style="text-align: center; color: #6b7280;">
+      <strong>💡 提示：</strong>Agent监控后台是管理员专属功能，用于监控多Agent系统的工作情况。<br>
+      如果您需要将其他用户设置为管理员，请联系技术支持。
+    </p>
+  </div>
+</body>
+</html>
